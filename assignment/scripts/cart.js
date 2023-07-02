@@ -9,22 +9,39 @@ function addItem(newItem){
     //add new items to the array
     basket.push(newItem)
     return true;
-}//end addItem 
+}//end of addItem 
 
-//call the function to see if it works 
-console.log('add milk to my basket', addItem('pop'));
-console.log('add eggs to my basket', addItem('eggs'));
+//call the addItem function to see if it works 
+console.log('Add pop to my basket', addItem('pop'));
+console.log('Add eggs to my basket', addItem('eggs'));
 console.log('Basket is now',basket);
 
-function listItems(){
-    for(let i=0; i<basket.length; i++){
-        console.log(basket[i], '\n');
-    }//end for loop
-}//end listItems 
 
-//call the function to see if it works
+function listItems(){
+    let space = '';
+    for(let i=0; i<basket.length; i++){
+        //log the items in the basket on new lines 
+        space += `${basket[i] + '\n'}`; 
+    }//end for loop
+    console.log(space);
+    return space;
+}//end of listItems 
+
+//call the listItem function to see if it works 
 console.log('What is in my basket:', listItems());
 
+function empty(){
+    for(let i=0; i<=basket.length; i++){
+        //empty the array 
+        basket.pop();
+    }//end for loop
+    return true;
+}//end of empty
+
+//call the empty function to see if it works 
+console.log('Is the basket now empty:', empty());
+//call the array to see if it is empty 
+console.log(basket);
 
 
 
