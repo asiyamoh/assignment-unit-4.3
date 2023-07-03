@@ -14,7 +14,7 @@ function addItem(newItem){
 //call the addItem function to see if it works 
 console.log('Add pop to my basket', addItem('pop'));
 console.log('Add eggs to my basket', addItem('eggs'));
-console.log('Basket is now',basket);
+console.log('Basket is now:',basket);
 
 
 function listItems(){
